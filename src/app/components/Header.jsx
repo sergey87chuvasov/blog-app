@@ -52,12 +52,14 @@ export default function Header() {
           />
         </SignedIn>
         <SignedOut>
-          <Button gradientDuoTone='purpleToBlue' outline>
-            <SignInButton />
-          </Button>
+          <Link href='/sign-in'>
+            <Button gradientDuoTone='purpleToBlue' outline>
+              Sign In
+            </Button>
+          </Link>
         </SignedOut>
+        <Navbar.Toggle />
       </div>
-      <Navbar.Toggle />
       <Navbar.Collapse>
         <Link href='/'>
           <Navbar.Link active={path === '/'} as={'div'}>
